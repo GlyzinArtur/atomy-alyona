@@ -1,0 +1,52 @@
+.contacts {
+  background: var(--cream-light);
+}
+
+.contacts-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 40px;
+  text-decoration: none;
+  color: var(--text);
+  min-width: 160px;
+  cursor: pointer;
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+}
+
+.contact-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.contacts-city {
+  text-align: center;
+  margin-top: 36px;
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 500px) {
+  .contact-card {
+    min-width: 120px;
+    padding: 20px 28px;
+  }
+}
