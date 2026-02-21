@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-  --brown: #8C5E35;
-  --brown-dark: #5C3D1E;
-  --brown-light: #A87A4F;
-  --cream: #F5F0EB;
-  --cream-dark: #E8DDD2;
-  --beige: #D4B896;
-  --beige-light: #C9AD8A;
-  --gray-bg: #EEEEEE;
-  --gray-light: #F5F5F5;
-  --white: #FFFFFF;
-  --text: #333333;
-  --text-light: #444444;
-  --text-muted: #888888;
-  --border: #E0E0E0;
+  --blue-dark: #1a2e4a;
+  --blue: #2a4d7a;
+  --blue-light: #3a6da8;
+  --blue-pale: #e8eef6;
+  --sky: #f0f4f9;
+  --cream: #f8f9fb;
+  --white: #ffffff;
+  --gold: #c4a265;
+  --gold-light: #d4b87a;
+  --text: #1e2a3a;
+  --text-light: #5a6a7a;
+  --text-muted: #8a9aaa;
+  --border: #dde4ed;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Raleway', -apple-system, sans-serif;
-
   --transition: all 0.3s ease;
 }
 
@@ -35,25 +33,23 @@ body {
 
 .app { overflow-x: hidden; }
 
-/* Section label */
 .section-label {
   font-family: var(--font-body);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: var(--brown);
+  color: var(--blue-light);
   text-align: center;
   margin-bottom: 12px;
   font-weight: 500;
 }
 
-/* Section title */
 .section-title {
   font-family: var(--font-display);
   font-size: 32px;
   font-weight: 400;
   text-align: center;
-  color: var(--brown);
+  color: var(--blue-dark);
   text-transform: uppercase;
   letter-spacing: 6px;
   margin-bottom: 20px;
@@ -72,10 +68,9 @@ body {
   line-height: 1.7;
 }
 
-/* CTA button — matches reference */
 .cta-button {
   display: inline-block;
-  background: var(--brown);
+  background: var(--blue);
   color: var(--white);
   font-family: var(--font-body);
   padding: 12px 32px;
@@ -91,11 +86,10 @@ body {
 }
 
 .cta-button:hover {
-  background: var(--brown-dark);
+  background: var(--blue-dark);
   transform: translateY(-1px);
 }
 
-/* Animate on scroll */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(24px);

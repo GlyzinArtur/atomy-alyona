@@ -29,11 +29,8 @@ export default function AboutAtomy() {
         </div>
       </div>
 
-      <div className="about-products animate-on-scroll">
-        <img src="/images/product-3.png" alt="Atomy Fame" className="about-product-img" />
-        <img src="/images/ru-prod-1.png" alt="Atomy Care" className="about-product-img" />
-        <img src="/images/ru-banner-3.png" alt="Atomy Health" className="about-product-img" />
-        <img src="/images/product-5.png" alt="Atomy Food" className="about-product-img" />
+      <div className="about-banner animate-on-scroll">
+        <img src="/images/ru-banner-1.png" alt="Atomy — набор продукции" className="about-banner-img" />
       </div>
 
       <div className="values-grid">

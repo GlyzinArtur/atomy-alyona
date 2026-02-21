@@ -1,5 +1,5 @@
 .about {
-  background: var(--gray-bg);
+  background: var(--sky);
   padding: 100px 40px;
 }
 
@@ -11,12 +11,11 @@
 .about-decor-line {
   width: 60px;
   height: 1px;
-  background: var(--brown);
+  background: var(--blue-light);
   margin: 16px auto 0;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
-/* Intro — two column */
 .about-intro {
   display: flex;
   gap: 56px;
@@ -25,16 +24,14 @@
   margin: 0 auto 72px;
 }
 
-.about-photo-col {
-  flex-shrink: 0;
-}
+.about-photo-col { flex-shrink: 0; }
 
 .about-photo-frame {
   width: 300px;
   height: 380px;
   border-radius: 0 0 150px 150px;
   overflow: hidden;
-  background: var(--beige);
+  background: var(--blue-pale);
 }
 
 .about-photo {
@@ -44,9 +41,7 @@
   object-position: center top;
 }
 
-.about-text-col {
-  flex: 1;
-}
+.about-text-col { flex: 1; }
 
 .about-question {
   font-family: var(--font-display);
@@ -63,7 +58,6 @@
   color: var(--text-light);
   line-height: 1.8;
   margin-bottom: 16px;
-  font-weight: 400;
 }
 
 .about-desc strong {
@@ -71,30 +65,19 @@
   color: var(--text);
 }
 
-/* Product thumbnails */
-.about-products {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 72px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.about-banner {
+  max-width: 640px;
+  margin: 0 auto 72px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(26, 46, 74, 0.08);
 }
 
-.about-product-img {
-  width: 160px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s;
+.about-banner-img {
+  width: 100%;
+  display: block;
 }
 
-.about-product-img:hover {
-  transform: scale(1.04);
-}
-
-/* Values 2x2 grid */
 .values-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -113,14 +96,13 @@
   font-family: var(--font-display);
   font-size: 48px;
   font-weight: 300;
-  color: var(--brown);
-  opacity: 0.4;
+  color: var(--blue-light);
+  opacity: 0.35;
   line-height: 1;
   flex-shrink: 0;
 }
 
 .value-title {
-  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 700;
   color: var(--text);
@@ -131,7 +113,6 @@
   font-size: 14px;
   color: var(--text-light);
   line-height: 1.6;
-  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -139,7 +120,5 @@
   .about-intro { flex-direction: column; gap: 32px; }
   .about-photo-frame { width: 220px; height: 280px; margin: 0 auto; }
   .about-text-col { text-align: center; }
-  .about-products { flex-wrap: wrap; gap: 12px; }
-  .about-product-img { width: 120px; height: 90px; }
   .values-grid { grid-template-columns: 1fr; gap: 28px; }
 }

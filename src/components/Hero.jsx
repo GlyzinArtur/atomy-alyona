@@ -31,7 +31,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero-right">
-        <img src="/images/alyona-nobg.jpg" alt="Алёна — консультант Atomy" className="hero-photo" />
+        <img src="/images/alyona-hero.jpg" alt="Алёна — консультант Atomy" className="hero-photo" />
       </div>
     </section>
   )

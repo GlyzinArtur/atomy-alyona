@@ -17,7 +17,7 @@
   font-family: var(--font-display);
   font-size: 36px;
   font-weight: 400;
-  color: var(--brown);
+  color: var(--blue-dark);
   text-transform: uppercase;
   letter-spacing: 4px;
   line-height: 1.2;
@@ -39,13 +39,12 @@
 .whyme-line {
   width: 36px;
   height: 1px;
-  background: var(--brown);
+  background: var(--blue-light);
   flex-shrink: 0;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .whyme-item span {
-  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 500;
   color: var(--text);
