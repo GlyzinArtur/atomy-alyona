@@ -1,52 +1,52 @@
 .contacts {
-  background: var(--cream-light);
+  background: var(--cream);
+  padding: 100px 40px;
 }
 
-.contacts-grid {
+.contacts .section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--brown);
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.contacts-row {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
-.contact-card {
+.contact-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 12px;
-  padding: 28px 40px;
   text-decoration: none;
   color: var(--text);
-  min-width: 160px;
-  cursor: pointer;
+  padding: 14px 24px;
+  border-radius: 12px;
+  transition: var(--transition);
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+
+.contact-item:hover {
   background: var(--white);
-  border: 1px solid var(--cream-dark);
+  border-color: var(--border);
 }
 
-.contact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.contact-icon {
-  font-size: 2.5rem;
-}
-
-.contact-label {
-  font-weight: 600;
-  font-size: 1rem;
-}
+.contact-icon { font-size: 1.4rem; }
+.contact-label { font-weight: 500; }
 
 .contacts-city {
   text-align: center;
   margin-top: 36px;
-  font-size: 1.1rem;
-  color: var(--text-light);
-}
-
-@media (max-width: 500px) {
-  .contact-card {
-    min-width: 120px;
-    padding: 20px 28px;
-  }
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400;
 }

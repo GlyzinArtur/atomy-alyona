@@ -3,8 +3,8 @@ import './Footer.css'
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>Сайт создан с ❤️ для Алёны</p>
-      <p className="footer-year">© {new Date().getFullYear()}</p>
+      <img src="/images/atomy-logo.svg" alt="Atomy" className="footer-logo" />
+      <p className="footer-copy">© {new Date().getFullYear()} · Алёна — консультант Atomy</p>
     </footer>
   )
 }

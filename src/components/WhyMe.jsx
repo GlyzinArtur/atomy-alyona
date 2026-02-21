@@ -1,28 +1,31 @@
 import './WhyMe.css'
 
-const reasons = [
-  { icon: '🤝', title: 'Личный подход', desc: 'Помогу подобрать продукты именно под ваши потребности и тип кожи' },
-  { icon: '🎓', title: 'Опыт и знания', desc: 'Многолетний опыт в сфере красоты, обучения и работы с людьми' },
-  { icon: '💬', title: 'Всегда на связи', desc: 'Отвечу на любые вопросы и помогу с оформлением заказа' },
+const advantages = [
+  'Личный подход',
+  'Бесплатная консультация',
+  'Опыт в обучении и работе с людьми',
+  'Помощь с выбором и оформлением',
 ]
 
 export default function WhyMe() {
   return (
-    <section className="section why-me">
-      <h2 className="section-title animate-on-scroll">Почему со мной?</h2>
-      <p className="section-subtitle animate-on-scroll">
-        Я не просто продаю — я помогаю разобраться и сделать правильный выбор
-      </p>
-      <div className="reasons-list">
-        {reasons.map((r, i) => (
-          <div key={i} className="reason-item animate-on-scroll" style={{ transitionDelay: `${i * 0.15}s` }}>
-            <div className="reason-icon">{r.icon}</div>
-            <div>
-              <h3 className="reason-title">{r.title}</h3>
-              <p className="reason-desc">{r.desc}</p>
-            </div>
+    <section className="whyme">
+      <div className="whyme-inner">
+        <div className="whyme-text animate-on-scroll">
+          <p className="section-label">Преимущества</p>
+          <h2 className="whyme-heading">Почему<br />выбирают меня</h2>
+          <div className="whyme-list">
+            {advantages.map((a, i) => (
+              <div key={i} className="whyme-item">
+                <div className="whyme-line" />
+                <span>{a}</span>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <div className="whyme-photo-col animate-on-scroll">
+          <img src="/images/alyona-office.jpg" alt="Алёна за работой" className="whyme-photo" />
+        </div>
       </div>
     </section>
   )

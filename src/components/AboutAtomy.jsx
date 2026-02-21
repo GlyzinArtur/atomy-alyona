@@ -1,52 +1,49 @@
 import './AboutAtomy.css'
 
-const features = [
-  { icon: '🇰🇷', title: 'Южная Корея', desc: 'Передовые технологии красоты и здоровья' },
-  { icon: '💎', title: 'Абсолютное качество', desc: 'Продукция мирового уровня по строгим стандартам' },
-  { icon: '💰', title: 'Честные цены', desc: 'Без наценок — напрямую от производителя' },
-  { icon: '🌍', title: '26+ стран', desc: 'Глобальный бренд с мировым признанием' },
+const values = [
+  { num: '01', title: 'Абсолютное качество', desc: 'Продукция мирового уровня по строгим стандартам Южной Кореи' },
+  { num: '02', title: 'Доступные цены', desc: 'Без наценок посредников — напрямую от производителя' },
+  { num: '03', title: 'Натуральный состав', desc: 'Безопасные ингредиенты, проверенные дерматологами' },
+  { num: '04', title: 'Мировой бренд', desc: '26+ стран, миллионы довольных клиентов по всему миру' },
 ]
 
 export default function AboutAtomy() {
   return (
-    <section className="section about" id="about">
+    <section className="about" id="about">
       <div className="about-header animate-on-scroll">
-        <img src="/images/atomy-logo.svg" alt="Atomy" className="about-logo" />
-        <h2 className="section-title">Мировой бренд из Южной Кореи</h2>
-        <p className="section-subtitle">
-          Премиальная косметика, здоровье и товары для дома
-        </p>
+        <p className="section-label">О бренде</p>
+        <h2 className="section-title">Atomy</h2>
+        <div className="about-decor-line" />
       </div>
 
-      <div className="product-banner animate-on-scroll">
-        <img src="/images/ru-banner-1.png" alt="Atomy — набор продукции" className="banner-img" />
-      </div>
-
-      <div className="product-grid animate-on-scroll">
-        <div className="product-card">
-          <img src="/images/product-3.png" alt="Atomy The Fame Set" />
-          <span>Уход за кожей</span>
+      <div className="about-intro animate-on-scroll">
+        <div className="about-photo-col">
+          <div className="about-photo-frame">
+            <img src="/images/alyona-consultation.jpg" alt="Алёна" className="about-photo" />
+          </div>
         </div>
-        <div className="product-card">
-          <img src="/images/ru-prod-1.png" alt="Atomy Evening Care" />
-          <span>Вечерний уход</span>
-        </div>
-        <div className="product-card">
-          <img src="/images/ru-banner-3.png" alt="Atomy Dental Sonic" />
-          <span>Забота о здоровье</span>
-        </div>
-        <div className="product-card">
-          <img src="/images/product-5.png" alt="Atomy Café" />
-          <span>Кофе и еда</span>
+        <div className="about-text-col">
+          <p className="about-question">Готовы узнать<br />что такое Atomy?</p>
+          <p className="about-desc"><strong>Atomy</strong> — глобальный бренд из Южной Кореи, который объединяет премиальное качество и доступные цены. Косметика, здоровье, товары для дома — всё, что нужно для заботы о себе.</p>
+          <p className="about-desc">Компания присутствует в более чем 26 странах мира и продолжает расти, привлекая миллионы клиентов качеством своей продукции.</p>
         </div>
       </div>
 
-      <div className="features-grid">
-        {features.map((f, i) => (
-          <div key={i} className="feature-card animate-on-scroll" style={{ transitionDelay: `${i * 0.1}s` }}>
-            <div className="feature-icon">{f.icon}</div>
-            <h3 className="feature-title">{f.title}</h3>
-            <p className="feature-desc">{f.desc}</p>
+      <div className="about-products animate-on-scroll">
+        <img src="/images/product-3.png" alt="Atomy Fame" className="about-product-img" />
+        <img src="/images/ru-prod-1.png" alt="Atomy Care" className="about-product-img" />
+        <img src="/images/ru-banner-3.png" alt="Atomy Health" className="about-product-img" />
+        <img src="/images/product-5.png" alt="Atomy Food" className="about-product-img" />
+      </div>
+
+      <div className="values-grid">
+        {values.map((v, i) => (
+          <div key={i} className="value-item animate-on-scroll" style={{ transitionDelay: `${i * 0.1}s` }}>
+            <span className="value-num">{v.num}</span>
+            <div>
+              <h3 className="value-title">{v.title}</h3>
+              <p className="value-desc">{v.desc}</p>
+            </div>
           </div>
         ))}
       </div>
