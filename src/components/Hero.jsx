@@ -89,12 +89,12 @@ export const Hero = () => {
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
             >
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center">
-                  <span className="text-xl">🌿</span>
+                <div className="h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center">
+                  <span className="text-xl text-atomy-blue">💎</span>
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 font-medium">Качество</p>
-                  <p className="text-sm font-bold text-slate-800">Масс-тиж</p>
+                  <p className="text-xs text-slate-500 font-medium">Абсолютное</p>
+                  <p className="text-sm font-bold text-slate-800">Качество</p>
                 </div>
               </div>
             </motion.div>
