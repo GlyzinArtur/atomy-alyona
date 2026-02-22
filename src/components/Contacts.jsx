@@ -35,7 +35,7 @@ const contacts = [
 
 export default function Contacts() {
   return (
-    <section className="contacts">
+    <section className="contacts" id="contacts">
       <p className="section-label animate-on-scroll">Связаться</p>
       <h2 className="section-title animate-on-scroll">Контакты</h2>
       <p className="section-subtitle animate-on-scroll">

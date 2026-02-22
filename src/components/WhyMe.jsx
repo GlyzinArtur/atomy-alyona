@@ -9,7 +9,7 @@ const advantages = [
 
 export default function WhyMe() {
   return (
-    <section className="whyme">
+    <section className="whyme" id="why">
       <div className="whyme-inner">
         <div className="whyme-text animate-on-scroll">
           <p className="section-label">Преимущества</p>
