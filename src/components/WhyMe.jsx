@@ -24,7 +24,7 @@ export default function WhyMe() {
           </div>
         </div>
         <div className="whyme-photo-col animate-on-scroll">
-          <img src="/images/alyona-office.jpg" alt="Алёна за работой" className="whyme-photo" />
+          <img src={`${import.meta.env.BASE_URL}images/alyona-office.jpg`} alt="Алёна за работой" className="whyme-photo" />
         </div>
       </div>
     </section>

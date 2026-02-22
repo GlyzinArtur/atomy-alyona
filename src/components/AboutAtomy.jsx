@@ -19,7 +19,7 @@ export default function AboutAtomy() {
       <div className="about-intro animate-on-scroll">
         <div className="about-photo-col">
           <div className="about-photo-frame">
-            <img src="/images/alyona-consultation.jpg" alt="Алёна" className="about-photo" />
+            <img src={`${import.meta.env.BASE_URL}images/alyona-consultation.jpg`} alt="Алёна" className="about-photo" />
           </div>
         </div>
         <div className="about-text-col">
@@ -30,7 +30,7 @@ export default function AboutAtomy() {
       </div>
 
       <div className="about-banner animate-on-scroll">
-        <img src="/images/ru-banner-1.png" alt="Atomy — набор продукции" className="about-banner-img" />
+        <img src={`${import.meta.env.BASE_URL}images/ru-banner-1.png`} alt="Atomy — набор продукции" className="about-banner-img" />
       </div>
 
       <div className="values-grid">
