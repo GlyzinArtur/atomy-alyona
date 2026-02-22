@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-left">
           <span className="hero-badge">Официальный дистрибьютор Atomy</span>
-          <h1 className="hero-name">Федерящина Елена</h1>
+          <h1 className="hero-name">Федеряшина Елена</h1>
           <p className="hero-role">Ваш персональный консультант Atomy<br />г. Великий Новгород</p>
           <p className="hero-quote">«Красота начинается с заботы о себе»</p>
           <div className="hero-buttons">
