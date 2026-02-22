@@ -23,7 +23,7 @@ const products = [
     category: 'Красота',
     price: '16 000 ₽',
     pv: '120 000 PV',
-    image: './images/product-2.png',
+    image: './images/absolute-cellactive.png',
     description: 'Инновационный пептидный комплекс для омоложения кожи. Хит продаж в антивозрастной линейке.',
     bestseller: true,
   },
