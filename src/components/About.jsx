@@ -48,12 +48,12 @@ export const About = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center">
-                <Sparkles className="text-atomy-blue w-6 h-6" />
+              <div className="w-12 h-12 rounded-full bg-rose-50 flex items-center justify-center">
+                <Heart className="text-rose-500 w-6 h-6" />
               </div>
               <div>
-                <p className="text-sm text-slate-500 font-medium">Мой статус</p>
-                <p className="font-bold text-slate-800">Мастер продаж</p>
+                <p className="text-sm text-slate-500 font-medium">С заботой</p>
+                <p className="font-bold text-slate-800">О вашей красоте</p>
               </div>
             </motion.div>
           </div>
