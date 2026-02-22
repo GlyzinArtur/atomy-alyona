@@ -1,42 +1,27 @@
-import { useEffect } from 'react'
-import Hero from './components/Hero'
-import AboutAtomy from './components/AboutAtomy'
-import WhyMe from './components/WhyMe'
-import HowToStart from './components/HowToStart'
-import Contacts from './components/Contacts'
-import Footer from './components/Footer'
-import './App.css'
+import React from 'react';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { About } from './components/About';
+import { Products } from './components/Products';
+import { Benefits } from './components/Benefits';
+import { RegistrationSteps } from './components/RegistrationSteps';
+import { Contacts, Footer } from './components/Contacts';
 
 function App() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-      observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <div className="app">
-      <Hero />
-      <AboutAtomy />
-      <WhyMe />
-      <HowToStart />
-      <Contacts />
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <Hero />
+        <About />
+        <Products />
+        <Benefits />
+        <RegistrationSteps />
+        <Contacts />
+      </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

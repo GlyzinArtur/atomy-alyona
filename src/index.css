@@ -1,1 +1,16 @@
-/* Reset handled in App.css */
+@import "tailwindcss";
+
+@theme {
+  --color-atomy-blue: #00468C;
+  --color-atomy-light: #EAF3FC;
+  --color-atomy-accent: #00A9E0;
+  --color-atomy-dark: #1A1A1A;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-atomy-dark font-sans antialiased;
+  }
+}

@@ -1,57 +1,111 @@
-import './Contacts.css'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Section } from './ui/Section';
+import { Typography } from './ui/Typography';
+import { Phone, Mail, MapPin, Instagram, MessagesSquare } from 'lucide-react';
 
-const contacts = [
-  {
-    label: 'Telegram',
-    href: 'https://t.me/vladilena_art',
-    color: '#26A5E4',
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'ВКонтакте',
-    href: 'https://vk.ru/vladilena_art',
-    color: '#0077FF',
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.76 13.29h-1.18c-.45 0-.58-.36-1.38-1.17-.7-.67-1-.77-1.17-.77-.24 0-.3.07-.3.4v1.07c0 .28-.09.45-.83.45-1.22 0-2.58-.74-3.53-2.12C6.1 11.27 5.72 9.66 5.72 9.4c0-.17.07-.32.4-.32h1.18c.3 0 .41.14.53.46.58 1.66 1.54 3.12 1.94 3.12.15 0 .22-.07.22-.45V10.8c-.05-.76-.44-.82-.44-1.1 0-.14.12-.28.3-.28h1.86c.25 0 .34.14.34.44v2.33c0 .25.11.34.18.34.15 0 .27-.09.55-.37.85-.95 1.46-2.43 1.46-2.43.08-.17.21-.32.52-.32h1.18c.35 0 .43.18.35.44-.15.7-1.6 2.73-1.6 2.73-.13.2-.17.3 0 .53.13.17.53.53.8.85.5.58.88 1.07.99 1.41.1.33-.06.5-.4.5z"/>
-      </svg>
-    ),
-  },
-  {
-    label: '+7 911 764 7971',
-    href: 'tel:+79117647971',
-    color: '#34C759',
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-      </svg>
-    ),
-  },
-]
-
-export default function Contacts() {
+export const Contacts = () => {
   return (
-    <section className="contacts" id="contacts">
-      <p className="section-label animate-on-scroll">Связаться</p>
-      <h2 className="section-title animate-on-scroll">Контакты</h2>
-      <p className="section-subtitle animate-on-scroll">
-        Напишите в удобный мессенджер — отвечу с удовольствием
-      </p>
-      <div className="contacts-grid animate-on-scroll">
-        {contacts.map((c, i) => (
-          <a key={i} href={c.href} target="_blank" rel="noopener noreferrer" className="contact-card" style={{ '--accent': c.color }}>
-            <div className="contact-icon-circle">
-              {c.icon}
+    <Section id="contacts" background="blue" className="relative text-white overflow-hidden">
+      
+      {/* Decorative SVG */}
+      <div className="absolute inset-0 bg-[url('./images/atomy-logo-white.svg')] bg-no-repeat bg-center opacity-[0.03] scale-150" />
+      <div className="absolute top-0 right-0 w-1/2 h-[200%] -translate-y-1/4 translate-x-1/3 bg-gradient-to-l from-white/10 to-transparent skew-x-12" />
+
+      <div className="max-w-4xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <Typography variant="h3" className="text-atomy-accent mb-4 uppercase tracking-wider font-semibold text-sm md:text-base">
+            Остались вопросы?
+          </Typography>
+          <Typography variant="h2" className="mb-6 text-white">
+            Давайте на связи
+          </Typography>
+          <p className="text-white/80 max-w-xl mx-auto text-lg">
+            Напишите мне в любой удобный мессенджер, и я отвечу вам в ближайшее время. Консультация бесплатна!
+          </p>
+        </div>
+
+        {/* Contact Links Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <motion.a 
+            href="https://wa.me/79000000000" // Placeholder, should be replaced with real number
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-6 p-6 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all group relative overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            {/* WhatsApp green accent on hover */}
+            <div className="absolute inset-0 bg-green-500/0 group-hover:bg-green-500/10 transition-colors" />
+            
+            <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center relative z-10">
+              <Phone className="w-7 h-7 text-white" />
             </div>
-            <span className="contact-name">{c.label}</span>
-          </a>
-        ))}
+            <div className="relative z-10">
+              <span className="block text-sm font-medium text-white/70 mb-1">WhatsApp</span>
+              <span className="block text-xl font-bold text-white">Написать сообщение</span>
+            </div>
+          </motion.a>
+
+          <motion.a 
+            href="https://t.me/username" // Placeholder
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-6 p-6 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all group relative overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            {/* Telegram blue accent on hover */}
+            <div className="absolute inset-0 bg-sky-500/0 group-hover:bg-sky-500/10 transition-colors" />
+            
+            <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center relative z-10">
+              <MessagesSquare className="w-7 h-7 text-white" />
+            </div>
+            <div className="relative z-10">
+              <span className="block text-sm font-medium text-white/70 mb-1">Telegram</span>
+              <span className="block text-xl font-bold text-white">Написать сообщение</span>
+            </div>
+          </motion.a>
+
+        </div>
+
       </div>
-      <p className="contacts-city animate-on-scroll">г. Великий Новгород</p>
-    </section>
-  )
-}
+    </Section>
+  );
+};
+
+export const Footer = () => {
+  return (
+    <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 border-b border-slate-800 pb-8">
+          
+          <div className="flex items-center gap-2">
+            <img src="./images/atomy-logo-white.svg" alt="Atomy Logo" className="h-6 w-auto opacity-70" />
+            <span className="font-bold text-lg text-white ml-1">Alyona</span>
+          </div>
+
+          <div className="flex gap-4">
+            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-atomy-blue hover:text-white transition-colors">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-atomy-blue hover:text-white transition-colors">
+              <Mail className="w-5 h-5" />
+            </a>
+          </div>
+
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-between text-sm">
+          <p>© {new Date().getFullYear()} Atomy Alyona. Все права защищены.</p>
+          <p className="mt-2 md:mt-0">Сайт независимого дистрибьютора компании Atomy</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
