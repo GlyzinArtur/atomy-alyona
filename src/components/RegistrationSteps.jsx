@@ -6,23 +6,23 @@ import { UserPlus, ShoppingBag, Truck, Gift } from 'lucide-react';
 
 const steps = [
   {
-    title: 'Напишите мне',
-    description: 'Свяжитесь со мной в любом удобном мессенджере (WhatsApp, Telegram).',
+    title: 'Регистрация',
+    description: 'Пройдите быструю бесплатную регистрацию по ссылке ниже, чтобы получить доступ к оптовым ценам.',
     icon: <UserPlus className="w-6 h-6 text-atomy-blue" />,
   },
   {
-    title: 'Регистрация',
-    description: 'Я помогу вам пройти бесплатную регистрацию, чтобы получить доступ к ценам со скидкой.',
+    title: 'Установка приложения',
+    description: 'Скачайте официальное приложение Atomy Mobile или зайдите на сайт под своим логином.',
     icon: <Gift className="w-6 h-6 text-atomy-blue" />,
   },
   {
     title: 'Выбор продукции',
-    description: 'Подберу для вас оптимальный набор косметики или витаминов под ваши задачи.',
+    description: 'Подберите подходящую корейскую косметику или товары для здоровья в каталоге.',
     icon: <ShoppingBag className="w-6 h-6 text-atomy-blue" />,
   },
   {
     title: 'Оформление',
-    description: 'Вы сами оформляете заказ в личном кабинете с доставкой до двери или в центр.',
+    description: 'Закажите товары с удобной доставкой до двери или в бесплатный образовательный центр.',
     icon: <Truck className="w-6 h-6 text-atomy-blue" />,
   },
 ];
@@ -86,6 +86,18 @@ export const RegistrationSteps = () => {
             ))}
           </div>
         </div>
+      </div>
+      
+      {/* Registration Button */}
+      <div className="mt-16 flex justify-center relative z-10">
+        <a 
+          href="https://m.atomy.ru/gate/join/easyreg/v2/41789284" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center font-medium transition-all duration-300 ease-out rounded-full bg-atomy-accent text-white hover:bg-sky-500 hover:shadow-lg hover:shadow-atomy-accent/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-atomy-accent h-14 px-10 text-lg shadow-xl"
+        >
+          Пройти регистрацию
+        </a>
       </div>
       
     </Section>

@@ -37,7 +37,7 @@ export const Hero = () => {
           </Typography>
           
           <Typography variant="lead" className="mb-8 max-w-2xl mx-auto lg:mx-0">
-            Привет, я Алёна! Помогаю подбирать идеальный уход для вашей кожи и здоровье для организма с продукцией абсолютного качества по абсолютной цене.
+            Привет, я Елена Федеряшина! Помогаю подбирать идеальный уход для вашей кожи и здоровье для организма с продукцией абсолютного качества по абсолютной цене.
           </Typography>
           
           <motion.div 
@@ -46,11 +46,11 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <Button size="lg" className="w-full sm:w-auto shadow-xl shadow-atomy-blue/20" as="a" href="#products">
-              Смотреть каталог
+            <Button size="lg" className="w-full sm:w-auto shadow-xl shadow-atomy-blue/20" as="a" href="https://m.atomy.ru/gate/join/easyreg/v2/41789284" target="_blank" rel="noopener noreferrer">
+              Регистрация и заказ
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto" as="a" href="#about">
-              Узнать больше
+            <Button variant="outline" size="lg" className="w-full sm:w-auto" as="a" href="#products">
+              Смотреть каталог
             </Button>
           </motion.div>
         </motion.div>
@@ -66,8 +66,8 @@ export const Hero = () => {
             <div className="absolute inset-0 rounded-[2rem] lg:rounded-[3rem] bg-gradient-to-tr from-atomy-blue/10 to-transparent rotate-3 scale-105" />
             <div className="absolute inset-0 rounded-[2rem] lg:rounded-[3rem] bg-white shadow-2xl overflow-hidden border border-slate-100/50">
               <img 
-                src="./images/alyona-hero.jpg" 
-                alt="Алёна - консультант Atomy" 
+                src="./images/elena-office.png" 
+                alt="Елена Федеряшина - консультант Atomy" 
                 className="w-full h-full object-cover object-top"
                 loading="eager"
               />

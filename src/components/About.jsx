@@ -34,8 +34,8 @@ export const About = () => {
             {/* Main image */}
             <div className="absolute inset-0 rounded-[2rem] overflow-hidden border-[8px] border-white shadow-xl">
               <img 
-                src="./images/alyona-nobg.jpg" 
-                alt="Алёна - ваш консультант Atomy" 
+                src="./images/elena-absolute.png" 
+                alt="Елена Федеряшина - ваш консультант Atomy" 
                 className="w-full h-full object-cover bg-blue-50/50" 
               />
             </div>
@@ -76,7 +76,7 @@ export const About = () => {
             </Typography>
             
             <Typography variant="p" className="mb-6">
-              Я — Алёна, официальный дистрибьютор южнокорейской компании Atomy. Моя миссия — показать вам, что премиальный уход может быть доступным.
+              Я — Елена Федеряшина, официальный дистрибьютор южнокорейской компании Atomy. Моя миссия — показать вам, что премиальный уход может быть доступным.
             </Typography>
             
             <Typography variant="p" className="mb-8">

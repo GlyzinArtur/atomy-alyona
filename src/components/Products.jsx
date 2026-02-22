@@ -23,7 +23,7 @@ const products = [
     category: 'Красота',
     price: '16 000 ₽',
     pv: '120 000 PV',
-    image: './images/prod-absolute.jpg',
+    image: './images/product-2.png',
     description: 'Инновационный пептидный комплекс для омоложения кожи. Хит продаж в антивозрастной линейке.',
     bestseller: true,
   },
@@ -155,7 +155,7 @@ export const Products = () => {
 
       {/* CTA */}
       <div className="mt-16 text-center">
-        <Button variant="secondary" size="lg" as="a" href="#contacts" className="group">
+        <Button variant="secondary" size="lg" as="a" href="https://m.atomy.ru/gate/join/easyreg/v2/41789284" target="_blank" rel="noopener noreferrer" className="group">
           Хочу заказать со скидкой
           <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
         </Button>

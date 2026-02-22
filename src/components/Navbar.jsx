@@ -35,7 +35,7 @@ export const Navbar = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 z-50 relative">
             <img src="./images/atomy-logo.svg" alt="Atomy Logo" className="h-7 w-auto" />
-            <span className="font-bold text-lg text-slate-800 tracking-tight ml-1">Alyona</span>
+            <span className="font-bold text-lg text-slate-800 tracking-tight ml-1">Елена</span>
           </a>
 
           {/* Desktop Navigation */}

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Section } from './ui/Section';
 import { Typography } from './ui/Typography';
-import { Phone, Mail, MapPin, Instagram, MessagesSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, MessagesSquare, Users as UsersIcon } from 'lucide-react';
 
 export const Contacts = () => {
   return (
@@ -27,31 +27,29 @@ export const Contacts = () => {
         </div>
 
         {/* Contact Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <motion.a 
-            href="https://wa.me/79000000000" // Placeholder, should be replaced with real number
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+79117647971"
             className="flex items-center gap-6 p-6 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all group relative overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            {/* WhatsApp green accent on hover */}
+            {/* Phone green accent on hover */}
             <div className="absolute inset-0 bg-green-500/0 group-hover:bg-green-500/10 transition-colors" />
             
             <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center relative z-10">
               <Phone className="w-7 h-7 text-white" />
             </div>
             <div className="relative z-10">
-              <span className="block text-sm font-medium text-white/70 mb-1">WhatsApp</span>
-              <span className="block text-xl font-bold text-white">Написать сообщение</span>
+              <span className="block text-sm font-medium text-white/70 mb-1">Телефон</span>
+              <span className="block text-xl font-bold text-white">+7 911 764 7971</span>
             </div>
           </motion.a>
 
           <motion.a 
-            href="https://t.me/username" // Placeholder
+            href="https://t.me/vladilena_art"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-6 p-6 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all group relative overflow-hidden"
@@ -68,7 +66,29 @@ export const Contacts = () => {
             </div>
             <div className="relative z-10">
               <span className="block text-sm font-medium text-white/70 mb-1">Telegram</span>
-              <span className="block text-xl font-bold text-white">Написать сообщение</span>
+              <span className="block text-xl font-bold text-white">@vladilena_art</span>
+            </div>
+          </motion.a>
+
+          <motion.a 
+            href="https://vk.ru/vladilena_art"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-6 p-6 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all group relative overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            {/* VK blue accent on hover */}
+            <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors" />
+            
+            <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center relative z-10">
+              <UsersIcon className="w-7 h-7 text-white" />
+            </div>
+            <div className="relative z-10">
+              <span className="block text-sm font-medium text-white/70 mb-1">ВКонтакте</span>
+              <span className="block text-xl font-bold text-white">vladilena_art</span>
             </div>
           </motion.a>
 
@@ -87,22 +107,22 @@ export const Footer = () => {
           
           <div className="flex items-center gap-2">
             <img src="./images/atomy-logo-white.svg" alt="Atomy Logo" className="h-6 w-auto opacity-70" />
-            <span className="font-bold text-lg text-white ml-1">Alyona</span>
+            <span className="font-bold text-lg text-white ml-1">Елена</span>
           </div>
 
           <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-atomy-blue hover:text-white transition-colors">
-              <Instagram className="w-5 h-5" />
+            <a href="https://vk.ru/vladilena_art" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-atomy-blue hover:text-white transition-colors">
+              <UsersIcon className="w-5 h-5" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-atomy-blue hover:text-white transition-colors">
-              <Mail className="w-5 h-5" />
+            <a href="https://t.me/vladilena_art" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-atomy-blue hover:text-white transition-colors">
+              <MessagesSquare className="w-5 h-5" />
             </a>
           </div>
 
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between text-sm">
-          <p>© {new Date().getFullYear()} Atomy Alyona. Все права защищены.</p>
+          <p>© {new Date().getFullYear()} Atomy Елена Федеряшина. Все права защищены.</p>
           <p className="mt-2 md:mt-0">Сайт независимого дистрибьютора компании Atomy</p>
         </div>
       </div>
