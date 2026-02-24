@@ -1,11 +1,13 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Products } from './components/Products';
-import { Benefits } from './components/Benefits';
-import { RegistrationSteps } from './components/RegistrationSteps';
-import { Contacts, Footer } from './components/Contacts';
+import { Catalog } from './components/Catalog';
+import { PriceCompare } from './components/PriceCompare';
+import { Reviews } from './components/Reviews';
+import { Certificates } from './components/Certificates';
+import { FAQ } from './components/FAQ';
+import { Consultant } from './components/Consultant';
+import { CTASection, Footer } from './components/Footer';
 
 function App() {
   return (
@@ -13,11 +15,13 @@ function App() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <About />
-        <Products />
-        <Benefits />
-        <RegistrationSteps />
-        <Contacts />
+        <Catalog />
+        <PriceCompare />
+        <Reviews />
+        <Certificates />
+        <FAQ />
+        <Consultant />
+        <CTASection />
       </main>
       <Footer />
     </div>

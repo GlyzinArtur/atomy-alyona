@@ -1,106 +1,137 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
-import { Typography } from './ui/Typography';
+import { ArrowDown, ShieldCheck, Truck, BadgePercent } from 'lucide-react';
+
+const REFERRAL_LINK = 'https://m.atomy.ru/gate/join/easyreg/v2/41789284';
+
+const stats = [
+  { value: '15+', label: 'лет на рынке' },
+  { value: '50+', label: 'стран мира' },
+  { value: '20M+', label: 'клиентов' },
+  { value: '500+', label: 'товаров' },
+];
+
+const badges = [
+  { icon: <ShieldCheck className="w-5 h-5" />, text: 'Корейское качество' },
+  { icon: <Truck className="w-5 h-5" />, text: 'Бесплатная доставка' },
+  { icon: <BadgePercent className="w-5 h-5" />, text: 'Скидки до 80%' },
+];
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden">
-      {/* Background with abstract shapes */}
-      <div className="absolute inset-0 bg-slate-50 overflow-hidden">
-        <div className="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] rounded-full bg-atomy-light blur-[120px] opacity-60" />
-        <div className="absolute top-[40%] -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-100 blur-[100px] opacity-50" />
-        <div className="absolute -bottom-[20%] right-[10%] w-[60%] h-[60%] rounded-full bg-sky-100 blur-[120px] opacity-40" />
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-atomy-blue via-[#003870] to-[#002d5e]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-atomy-accent/10 blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-blue-400/10 blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(0,169,224,0.15),transparent_60%)]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
-        
-        {/* Left Column - Text content */}
-        <motion.div 
-          className="w-full lg:w-1/2 text-center lg:text-left"
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8"
         >
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-slate-200/50 mb-6 shadow-sm"
-          >
-            <span className="flex h-2 w-2 rounded-full bg-atomy-blue mr-3 animate-pulse"></span>
-            <span className="text-sm font-medium text-slate-800">Официальный дистрибьютор Atomy</span>
-          </motion.div>
-          
-          <Typography variant="h1" className="mb-6">
-            Откройте мир <span className="text-transparent bg-clip-text bg-gradient-to-r from-atomy-blue to-atomy-accent">премиальной</span> корейской косметики
-          </Typography>
-          
-          <Typography variant="lead" className="mb-8 max-w-2xl mx-auto lg:mx-0">
-            Привет, я Елена Федеряшина! Помогаю подбирать идеальный уход для вашей кожи и здоровье для организма с продукцией абсолютного качества по абсолютной цене.
-          </Typography>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-          >
-            <Button size="lg" className="w-full sm:w-auto shadow-xl shadow-atomy-blue/20" as="a" href="https://m.atomy.ru/gate/join/easyreg/v2/41789284" target="_blank" rel="noopener noreferrer">
-              Регистрация и заказ
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto" as="a" href="#products">
-              Смотреть каталог
-            </Button>
-          </motion.div>
+          <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="text-sm font-medium text-white/90">Официальный дистрибьютор Atomy</span>
         </motion.div>
 
-        {/* Right Column - Hero Image/Composition */}
-        <motion.div 
-          className="w-full lg:w-1/2 relative flex justify-center"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight max-w-5xl mb-6"
         >
-          <div className="relative w-full max-w-md mx-auto aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
-            <div className="absolute inset-0 rounded-[2rem] lg:rounded-[3rem] bg-gradient-to-tr from-atomy-blue/10 to-transparent rotate-3 scale-105" />
-            <div className="absolute inset-0 rounded-[2rem] lg:rounded-[3rem] bg-white shadow-2xl overflow-hidden border border-slate-100/50">
-              <img 
-                src="./images/elena-office.png" 
-                alt="Елена Федеряшина - консультант Atomy" 
-                className="w-full h-full object-cover object-top"
-                loading="eager"
-              />
+          Гипермаркет из{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-atomy-accent to-cyan-300">
+            Южной Кореи
+          </span>
+          <br />
+          <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-semibold text-white/80">
+            и готовый бизнес под ключ
+          </span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed"
+        >
+          Покупайте качественные корейские товары для красоты и здоровья и экономьте до 80% на повседневных покупках.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="flex flex-col sm:flex-row items-center gap-4 mb-12"
+        >
+          <Button
+            size="lg"
+            variant="accent"
+            as="a"
+            href={REFERRAL_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto shadow-2xl shadow-atomy-accent/30 text-lg px-10"
+          >
+            Зарегистрироваться бесплатно
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            as="a"
+            href="#catalog"
+            className="w-full sm:w-auto bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white"
+          >
+            Посмотреть каталог
+          </Button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="flex flex-wrap justify-center gap-3 mb-16"
+        >
+          {badges.map((badge, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-white/80 text-sm"
+            >
+              {badge.icon}
+              <span>{badge.text}</span>
             </div>
-            
-            {/* Floating element 1 */}
-            <motion.div 
-              className="absolute -right-6 md:-right-10 top-1/4 bg-white/80 backdrop-blur-xl p-4 rounded-2xl shadow-xl border border-white/50"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            >
-              <img src="./images/atomy-logo.svg" alt="Atomy" className="h-8 w-auto opacity-90" />
-            </motion.div>
-
-            {/* Floating element 2 */}
-            <motion.div 
-              className="absolute -left-4 md:-left-8 bottom-1/4 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl border border-white/50"
-              animate={{ y: [0, 15, 0] }}
-              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-            >
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center">
-                  <span className="text-xl text-atomy-blue">💎</span>
-                </div>
-                <div>
-                  <p className="text-xs text-slate-500 font-medium">Абсолютное</p>
-                  <p className="text-sm font-bold text-slate-800">Качество</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          ))}
         </motion.div>
-        
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 w-full max-w-3xl"
+        >
+          {stats.map((stat, i) => (
+            <div key={i} className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-sm text-white/60">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
+
+        <motion.a
+          href="#catalog"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.6 }}
+          className="mt-12 text-white/40 hover:text-white/70 transition-colors"
+        >
+          <ArrowDown className="w-6 h-6 animate-bounce" />
+        </motion.a>
       </div>
     </section>
   );
