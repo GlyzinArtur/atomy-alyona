@@ -11,7 +11,7 @@ const comparisons = [
   {
     category: 'Уход за кожей',
     atomyName: 'Атоми Абсолют Набор',
-    atomyImage: 'https://image.atomy.ru/610_610/RU/goods/R00655/org/032/250523000042032.png',
+    atomyImage: 'https://image.atomy.ru/610_610/RU/goods/R00655/org/574/250523000042574.jpg',
     atomyPrice: 3100,
     regularName: 'Аналог в магазине',
     regularPrice: 8500,
@@ -27,7 +27,7 @@ const comparisons = [
   {
     category: 'Зубная паста',
     atomyName: 'Атоми Зубная Паста (5 шт)',
-    atomyImage: 'https://image.atomy.ru/610_610/RU/goods/R00505/org/609/250523000041609.png',
+    atomyImage: 'https://image.atomy.ru/610_610/RU/goods/R00505/org/750/250523000041750.jpg',
     atomyPrice: 1700,
     regularName: '5 тюбиков пасты',
     regularPrice: 3500,
@@ -35,7 +35,7 @@ const comparisons = [
   {
     category: 'Омега-3',
     atomyName: 'Атоми Аляска Е-Омега 3',
-    atomyImage: 'https://image.atomy.ru/610_610/RU/goods/R00111/org/778/250730000042778.jpg',
+    atomyImage: 'https://image.atomy.ru/610_610/RU/goods/R00111/org/782/250730000042782.jpg',
     atomyPrice: 2000,
     regularName: 'Аналог в аптеке',
     regularPrice: 4500,
@@ -43,7 +43,7 @@ const comparisons = [
   {
     category: 'Солнцезащита',
     atomyName: 'Атоми Солнцезащитный крем',
-    atomyImage: 'https://image.atomy.ru/610_610/RU/goods/R00285/org/593/250523000041593.png',
+    atomyImage: 'https://image.atomy.ru/610_610/RU/goods/R00285/org/407/250523000042407.jpg',
     atomyPrice: 700,
     regularName: 'Аналог SPF50+',
     regularPrice: 3200,

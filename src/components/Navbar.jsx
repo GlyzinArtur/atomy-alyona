@@ -37,7 +37,7 @@ export const Navbar = () => {
           <a href="#" className="flex items-center gap-2 z-50 relative">
             <img src="./images/atomy-logo.svg" alt="Atomy Logo" className="h-7 w-auto" />
             <span className={`font-bold text-lg tracking-tight ml-1 transition-colors ${isScrolled ? 'text-slate-800' : 'text-white'}`}>
-              Елена
+              Елена Федеряшина
             </span>
           </a>
 
